@@ -11,7 +11,7 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
 FROM projects
 JOIN pledges ON projects.id = pledges.project_id
 JOIN users ON users.id = pledges.user_id
-ORDER BY users.name
+ORDER BY users.name ASC
 "
 end
 
