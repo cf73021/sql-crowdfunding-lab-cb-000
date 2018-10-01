@@ -7,11 +7,11 @@
 # Make sure each ruby method returns a string containing a valid SQL statement.
 
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_name
-"SELECT projects.title, pledges.amount
+"SELECT DISTINCT projects.title, pledges.amount
 FROM projects
 INNER JOIN pledges ON projects.id = pledges.project_id
 INNER JOIN users ON users.id = pledges.user_id
-ORDER BY users.name 
+ORDER BY users.name
 "
 end
 
