@@ -29,7 +29,6 @@ FROM projects
 INNER JOIN pledges ON pledges.project_id = projects.id
 WHERE pledges.amount >= projects.funding_goal
 GROUP BY projects.title
-
 "
 end
 
