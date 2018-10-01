@@ -12,7 +12,7 @@ FROM projects
 INNER JOIN pledges ON projects.id = pledges.project_id
 INNER JOIN users ON users.id = pledges.user_id
 GROUP BY projects.title
-ORDER BY users.name
+ORDER BY projects.title
 "
 end
 
